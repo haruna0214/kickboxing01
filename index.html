@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キックボクシング体験｜初心者歓迎・入会金なし・新宿・墨田区</title>
+  <meta name="description" content="初心者歓迎のキックボクシング体験クラス。入会金なし・都度払い2,000円以内。東京（新宿・墨田区）開催。中学生以上、男女OK。">
+  <meta property="og:title" content="キックボクシング体験｜初心者歓迎・入会金なし">
+  <meta property="og:description" content="東京（新宿・墨田区）で開催。都度払い2,000円以内。気軽に始められるキックボクシング体験クラス。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --blue:    #00a3ee;
+      --dark:    #24495a;
+      --text:    #2e2e2e;
+      --muted:   #6b7a80;
+      --light:   #f4f8fa;
+      --border:  #dde6ea;
+      --white:   #ffffff;
+      --line:    #06C755;
+      --max:     720px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+      background: var(--white);
+      color: var(--text);
+      font-size: 16px;
+      line-height: 1.8;
+      padding-bottom: 68px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .wrap {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ---- 見出し ---- */
+    .sec-title {
+      font-size: clamp(1.25rem, 3.5vw, 1.65rem);
+      font-weight: 700;
+      color: var(--dark);
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+
+    .sec-sub {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 40px;
+    }
+
+    /* ---- ボタン ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 50px;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.2s;
+      text-align: center;
+      width: 100%;
+    }
+    .btn:hover { opacity: 0.82; }
+
+    .btn-line { background: var(--line); color: #fff; }
+    .btn-blue { background: var(--blue); color: #fff; }
+    .btn-ghost {
+      background: transparent;
+      border: 1.5px solid var(--dark);
+      color: var(--dark);
+    }
+
+    /* ---- セクション共通 ---- */
+    section { padding: 64px 0; }
+    section + section { border-top: 1px solid var(--border); }
+
+    /* =====================
+       ヘッダー
+    ===================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--dark);
+      letter-spacing: 0.04em;
+    }
+
+    .logo span { color: var(--blue); }
+
+    .hd-btns { display: flex; gap: 8px; }
+
+    .hd-btns a {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 8px 16px;
+      border-radius: 4px;
+      min-height: 36px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hd-line { background: var(--line); color: #fff; }
+    .hd-blue { background: var(--blue); color: #fff; }
+
+    /* =====================
+       ファーストビュー
+    ===================== */
+    .hero {
+      padding: 56px 0 64px;
+      background: var(--white);
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 560px;
+      height: 220px;
+      background: var(--light);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin: 0 auto 40px;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+      border-radius: 2px;
+      padding: 3px 10px;
+      margin-bottom: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.7rem, 5.5vw, 2.6rem);
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1.3;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--blue);
+    }
+
+    .hero-lead {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      line-height: 1.75;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 36px;
+    }
+
+    .hero-points span {
+      font-size: 0.8rem;
+      color: var(--dark);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 4px 12px;
+      background: var(--light);
+    }
+
+    .hero-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    /* =====================
+       共感
+    ===================== */
+    .empathy { background: var(--white); }
+
+    .pain-list {
+      list-style: none;
+      margin-bottom: 36px;
+    }
+
+    .pain-list li {
+      padding: 13px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.93rem;
+      color: var(--text);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .pain-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--blue);
+    }
+
+    .empathy-resolve {
+      background: var(--light);
+      border-left: 3px solid var(--blue);
+      padding: 20px 20px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .empathy-resolve p {
+      font-size: 0.93rem;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .empathy-resolve strong {
+      font-size: 1.05rem;
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    /* =====================
+       サービス
+    ===================== */
+    .service { background: var(--white); }
+
+    .feature-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-bottom: 0;
+    }
+
+    .feature-item {
+      background: var(--white);
+      padding: 24px 20px;
+    }
+
+    .feature-item h3 {
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .feature-item p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* =====================
+       体験内容
+    ===================== */
+    .program { background: var(--light); }
+
+    .program-img {
+      width: 100%;
+      height: 160px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 36px;
+    }
+
+    .step-list {
+      list-style: none;
+      counter-reset: step;
+    }
+
+    .step-item {
+      counter-increment: step;
+      display: flex;
+      gap: 18px;
+      padding-bottom: 28px;
+      position: relative;
+    }
+
+    .step-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 14px;
+      top: 32px;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .step-num {
+      min-width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--dark);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+
+    .step-body { padding-top: 3px; }
+
+    .step-body h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: var(--dark);
+    }
+
+    .step-body p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* =====================
+       料金
+    ===================== */
+    .price { background: var(--dark); color: var(--white); }
+
+    .price .sec-title { color: var(--white); }
+    .price .sec-sub   { color: rgba(255,255,255,0.55); }
+
+    .price-main {
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 4px;
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 24px;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .price-label {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 10px;
+    }
+
+    .price-num {
+      font-size: clamp(2.2rem, 8vw, 3.2rem);
+      font-weight: 900;
+      color: var(--blue);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .price-num small { font-size: 1rem; font-weight: 400; }
+
+    .price-note {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .price-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .price-includes li {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.75);
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .price-includes li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--blue);
+    }
+
+    /* =====================
+       開催場所
+    ===================== */
+    .location { background: var(--white); }
+
+    .location-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .location-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .location-map {
+      width: 100%;
+      height: 130px;
+      background: #dce8ef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .location-body {
+      padding: 16px;
+    }
+
+    .location-body h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .location-body p {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    .location-body .access {
+      font-size: 0.8rem;
+      color: var(--blue);
+      margin-top: 6px;
+    }
+
+    .location-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* =====================
+       安心材料
+    ===================== */
+    .trust { background: var(--light); }
+
+    .trust-list {
+      list-style: none;
+      margin-bottom: 36px;
+    }
+
+    .trust-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .trust-item:first-child { border-top: 1px solid var(--border); }
+
+    .trust-item h3 {
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+    }
+
+    .trust-item p {
+      font-size: 0.83rem;
+      color: var(--muted);
+    }
+
+    .trust-marker {
+      min-width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--blue);
+      margin-top: 10px;
+      flex-shrink: 0;
+    }
+
+    .trainer {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 24px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .trainer-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--light);
+      border: 1px dashed var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.68rem;
+      color: var(--muted);
+      text-align: center;
+      flex-shrink: 0;
+      line-height: 1.4;
+    }
+
+    .trainer-info h3 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .trainer-info p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* =====================
+       FAQ
+    ===================== */
+    .faq { background: var(--white); }
+
+    .faq-list { list-style: none; }
+
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+
+    .faq-item details summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 18px 0;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .faq-item details summary::-webkit-details-marker { display: none; }
+
+    .faq-item details summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--blue);
+      flex-shrink: 0;
+      line-height: 1;
+      transition: transform 0.2s;
+    }
+
+    .faq-item details[open] summary::after {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      padding: 0 0 18px 0;
+      font-size: 0.87rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    /* =====================
+       参加の流れ
+    ===================== */
+    .flow { background: var(--light); }
+
+    /* step-listと同じ構造を流用 */
+
+    .flow-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      color: var(--blue);
+      border: 1px solid var(--blue);
+      border-radius: 2px;
+      padding: 1px 7px;
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    /* =====================
+       CTA
+    ===================== */
+    .cta-section {
+      background: var(--dark);
+      color: var(--white);
+      padding: 64px 0;
+      border-top: none;
+    }
+
+    .cta-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cta-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 4px;
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .cta-card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .cta-card p {
+      font-size: 0.83rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.7;
+    }
+
+    .cta-card .btn {
+      margin-top: auto;
+    }
+
+    /* =====================
+       フッター
+    ===================== */
+    .site-footer {
+      background: #1a2e37;
+      color: rgba(255,255,255,0.5);
+      padding: 36px 24px;
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 14px;
+    }
+
+    .footer-logo span { color: var(--blue); }
+
+    .footer-nav {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 20px;
+      margin-bottom: 20px;
+    }
+
+    .footer-nav a {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .footer-copy { font-size: 0.72rem; }
+
+    /* =====================
+       固定フッターCTA
+    ===================== */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      display: flex;
+      background: rgba(36,73,90,0.97);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding: 10px 16px;
+      gap: 10px;
+    }
+
+    .sticky-cta a {
+      flex: 1;
+      min-height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      gap: 6px;
+    }
+
+    .sticky-line { background: var(--line); color: #fff; }
+    .sticky-blue { background: var(--blue); color: #fff; }
+
+    /* =====================
+       レスポンシブ
+    ===================== */
+    @media (min-width: 600px) {
+      .feature-list {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .location-cards {
+        flex-direction: row;
+        gap: 32px;
+      }
+
+      .location-card { flex: 1; }
+
+      .cta-cards {
+        flex-direction: row;
+        gap: 24px;
+      }
+
+      .cta-card { flex: 1; }
+
+      .hero-btns {
+        flex-direction: row;
+        max-width: 480px;
+      }
+
+      .hero-img { height: 280px; }
+    }
+
+    @media (min-width: 768px) {
+      .program-img { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header" role="banner">
+    <div class="logo">KICK<span>BOXING</span></div>
+    <nav class="hd-btns" aria-label="メインCTA">
+      <a href="#line" class="hd-line">LINE登録</a>
+      <a href="#form" class="hd-blue">体験申込</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ファーストビュー -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-img" role="img" aria-label="ヒーロービジュアル（ダミー）">
+          [ ヒービジュアル 画像 ]
+        </div>
+
+        <span class="hero-tag">初心者・未経験者 歓迎</span>
+
+        <h1>
+          「やってみたい」<br>
+          その気持ちで、<br>
+          <em>はじめてOK。</em>
+        </h1>
+
+        <p class="hero-lead">
+          東京（新宿・墨田区）で開催中。<br>
+          入会金なし、都度払い、気軽に参加できるキックボクシング体験クラスです。
+        </p>
+
+        <div class="hero-points">
+          <span>入会金なし</span>
+          <span>都度払い 〜2,000円</span>
+          <span>新宿・墨田区</span>
+          <span>中学生以上 男女OK</span>
+        </div>
+
+        <div class="hero-btns">
+          <a href="#form" class="btn btn-blue">体験を申し込む</a>
+          <a href="#line" class="btn btn-ghost">LINEで確認する</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 共感 -->
+    <section class="empathy">
+      <div class="wrap">
+        <h2 class="sec-title">こんな気持ち、ありませんか。</h2>
+        <p class="sec-sub">多くの方が、最初は同じ不安を抱えています。</p>
+
+        <ul class="pain-list">
+          <li>スポーツジムは続かなかった経験がある</li>
+          <li>キックボクシングに興味はあるけど、雰囲気が怖そうで不安</li>
+          <li>体力に自信がないし、周りについていけるか心配</li>
+          <li>月額会員だと通えなかった時がもったいない</li>
+          <li>道具が必要なのか、何を持っていけばいいかわからない</li>
+        </ul>
+
+        <div class="empathy-resolve">
+          <p>そのお悩み、ひとつずつ解決します。</p>
+          <strong>「1回だけ」を気軽に試せる体験クラスです。</strong>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- サービス -->
+    <section class="service">
+      <div class="wrap">
+        <h2 class="sec-title">選ばれる理由</h2>
+        <p class="sec-sub">初心者でも安心して参加できる仕組みを用意しています。</p>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <h3>入会金ゼロ</h3>
+            <p>入会金・登録料は不要。気に入ったら続けてOK。</p>
+          </div>
+          <div class="feature-item">
+            <h3>都度払い制</h3>
+            <p>月額固定なし。来た分だけ払う。2,000円以内で参加できます。</p>
+          </div>
+          <div class="feature-item">
+            <h3>手ぶらでOK</h3>
+            <p>グローブ等レンタルあり。動きやすい服装だけで来てください。</p>
+          </div>
+          <div class="feature-item">
+            <h3>少人数制</h3>
+            <p>少人数で丁寧に指導。初心者でも置いてきぼりにしません。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 体験内容 -->
+    <section class="program">
+      <div class="wrap">
+        <h2 class="sec-title">体験クラスの内容</h2>
+        <p class="sec-sub">約60分で基礎から楽しく学べます。</p>
+
+        <div class="program-img" role="img" aria-label="体験クラスの様子（ダミー）">
+          [ クラスの様子 画像 ]
+        </div>
+
+        <ul class="step-list">
+          <li class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h3>ウォームアップ（約10分）</h3>
+              <p>準備運動・体をほぐす動き。体力に自信がなくてもOK。</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h3>基本打撃の練習（約25分）</h3>
+              <p>ジャブ・クロス・ローキックなど基本を丁寧に解説。一人ひとりに合わせて指導します。</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h3>ミット打ち体験（約15分）</h3>
+              <p>実際にトレーナーのミットを打つ体験。達成感を体感できます。</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h3>クールダウン・質疑応答（約10分）</h3>
+              <p>ストレッチ後、疑問や今後の参加について気軽に相談できます。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- 料金 -->
+    <section class="price">
+      <div class="wrap">
+        <h2 class="sec-title">料金</h2>
+        <p class="sec-sub">月額なし・続けやすい都度払い制</p>
+
+        <div class="price-main">
+          <p class="price-label">体験クラス（1回）</p>
+          <p class="price-num">¥2,000<small> 以内</small></p>
+          <p class="price-note">※詳細はLINEまたはフォームでご確認ください。</p>
+        </div>
+
+        <ul class="price-includes">
+          <li>入会金・登録料 完全無料</li>
+          <li>グローブ等レンタル込み</li>
+          <li>都度払い（月額・定期縛りなし）</li>
+          <li>リピーター割引あり（詳細はLINEで）</li>
+          <li>キャンセルは前日までOK</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- 開催場所 -->
+    <section class="location">
+      <div class="wrap">
+        <h2 class="sec-title">開催エリア</h2>
+        <p class="sec-sub">東京2拠点で開催中</p>
+
+        <div class="location-cards">
+          <div class="location-card">
+            <div class="location-map" role="img" aria-label="新宿エリアの地図（ダミー）">
+              [ 地図 / 外観写真 ]
+            </div>
+            <div class="location-body">
+              <h3>新宿エリア</h3>
+              <p>新宿区内のレンタルスペース<br>（詳細はLINEまたは申込後にご案内）</p>
+              <p class="access">新宿駅 徒歩○分（ダミー）</p>
+            </div>
+          </div>
+
+          <div class="location-card">
+            <div class="location-map" role="img" aria-label="墨田区エリアの地図（ダミー）">
+              [ 地図 / 外観写真 ]
+            </div>
+            <div class="location-body">
+              <h3>墨田区エリア</h3>
+              <p>墨田区内のレンタルスペース<br>（詳細はLINEまたは申込後にご案内）</p>
+              <p class="access">錦糸町駅 徒歩○分（ダミー）</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="location-note">開催スケジュール・空き状況はLINEで随時お知らせします。</p>
+      </div>
+    </section>
+
+
+    <!-- 安心材料 -->
+    <section class="trust">
+      <div class="wrap">
+        <h2 class="sec-title">初めてでも安心の理由</h2>
+        <p class="sec-sub">「怖い・ついていけない」はありません。</p>
+
+        <ul class="trust-list">
+          <li class="trust-item">
+            <div class="trust-marker"></div>
+            <div>
+              <h3>スパーリングなし</h3>
+              <p>体験クラスは相手と打ち合う練習はありません。ミット打ちとシャドーが中心。安全です。</p>
+            </div>
+          </li>
+          <li class="trust-item">
+            <div class="trust-marker"></div>
+            <div>
+              <h3>手ぶらでOK</h3>
+              <p>グローブや包帯はレンタル可能。動きやすい服装さえあれば特別な準備は不要です。</p>
+            </div>
+          </li>
+          <li class="trust-item">
+            <div class="trust-marker"></div>
+            <div>
+              <h3>アットホームな雰囲気</h3>
+              <p>怖い先輩がいるような雰囲気ではありません。参加者の多くが初心者・運動不足からのスタートです。</p>
+            </div>
+          </li>
+          <li class="trust-item">
+            <div class="trust-marker"></div>
+            <div>
+              <h3>参加前の相談はLINEで</h3>
+              <p>「私でも大丈夫？」「何を着ていけばいい？」などどんな質問にも丁寧に回答します。</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="trainer">
+          <div class="trainer-icon" role="img" aria-label="トレーナーアイコン（顔出しなし）">
+            TRAINER
+          </div>
+          <div class="trainer-info">
+            <h3>トレーナー ○○（ダミー名）</h3>
+            <p>
+              キックボクシング歴○○年。「初心者に寄り添った指導」をモットーに、怒らない・焦らせない丁寧な指導を心がけています。資格：○○インストラクター認定（ダミー）
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="faq">
+      <div class="wrap">
+        <h2 class="sec-title">よくある質問</h2>
+        <p class="sec-sub">参加前の不安を解消します。</p>
+
+        <ul class="faq-list">
+          <li class="faq-item">
+            <details>
+              <summary>体力に全く自信がないのですが大丈夫ですか？</summary>
+              <p class="faq-answer">まったく問題ありません。体験クラスは初心者・運動不足の方に合わせたペースで進めます。休憩しながら参加できますので、自分のペースで楽しんでください。</p>
+            </details>
+          </li>
+          <li class="faq-item">
+            <details>
+              <summary>女性でも参加できますか？</summary>
+              <p class="faq-answer">はい、女性も歓迎です。スパーリングはなく安全ですので、安心してご参加ください。</p>
+            </details>
+          </li>
+          <li class="faq-item">
+            <details>
+              <summary>何を持っていけばいいですか？</summary>
+              <p class="faq-answer">動きやすい服装・運動靴・タオル・飲み物があればOKです。グローブや包帯はレンタルできますので手ぶらで大丈夫です。</p>
+            </details>
+          </li>
+          <li class="faq-item">
+            <details>
+              <summary>予約はどうやってするの？</summary>
+              <p class="faq-answer">まずGoogleフォームから体験申込をしてください。開催スケジュールや空き情報はLINE公式アカウントでお知らせします。</p>
+            </details>
+          </li>
+          <li class="faq-item">
+            <details>
+              <summary>キャンセルはできますか？</summary>
+              <p class="faq-answer">前日までのキャンセルは無料です。当日キャンセルについてはLINEでご連絡ください。</p>
+            </details>
+          </li>
+          <li class="faq-item">
+            <details>
+              <summary>1回だけの参加でもOKですか？</summary>
+              <p class="faq-answer">もちろんです。都度払い制なので1回だけの参加でもOK。無理な勧誘は一切ありません。</p>
+            </details>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- 参加の流れ -->
+    <section class="flow">
+      <div class="wrap">
+        <h2 class="sec-title">参加までの流れ</h2>
+        <p class="sec-sub">申込から当日まで、迷わずスムーズです。</p>
+
+        <ul class="step-list" id="form">
+          <li class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <span class="flow-tag">Googleフォーム</span>
+              <h3>体験申込フォームを送信</h3>
+              <p>下の「体験を申し込む」ボタンからフォームに入力。希望日程や連絡先を記入してください。</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <span class="flow-tag">LINE / メール</span>
+              <h3>日程・場所の確認連絡が届く</h3>
+              <p>申込後、LINEまたはメールで開催日・集合場所・持ち物をご案内します。</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <span class="flow-tag">当日</span>
+              <h3>動きやすい格好で参加</h3>
+              <p>手ぶらでOK。当日の流れはトレーナーが丁寧に説明するので、初めてでも迷いません。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta-section" id="line">
+      <div class="wrap">
+        <div class="cta-cards">
+          <div class="cta-card">
+            <h3>LINE公式アカウントを登録</h3>
+            <p>開催日程・空き状況のお知らせ、予約受付はLINEで行っています。まず登録しておくと便利です。</p>
+            <a href="https://lin.ee/XXXXXXXX" class="btn btn-line" target="_blank" rel="noopener noreferrer">
+              LINEで登録する（無料）
+            </a>
+          </div>
+
+          <div class="cta-card">
+            <h3>体験クラスを申し込む</h3>
+            <p>初回体験はGoogleフォームから。希望日程・連絡先を入力するだけ。2分で完了します。</p>
+            <a href="https://forms.gle/XXXXXXXX" class="btn btn-blue" target="_blank" rel="noopener noreferrer">
+              体験申込フォームへ
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- フッター -->
+  <footer class="site-footer" role="contentinfo">
+    <p class="footer-logo">KICK<span>BOXING</span></p>
+    <nav aria-label="フッターナビ">
+      <ul class="footer-nav">
+        <li><a href="#service">サービス</a></li>
+        <li><a href="#price">料金</a></li>
+        <li><a href="#location">場所</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+        <li><a href="#line">お問い合わせ</a></li>
+        <li><a href="#">プライバシーポリシー</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2025 Kickboxing Studio. All rights reserved.</p>
+  </footer>
+
+
+  <!-- 固定フッターCTA -->
+  <div class="sticky-cta" role="complementary" aria-label="クイックアクション">
+    <a href="https://lin.ee/XXXXXXXX" class="sticky-line" target="_blank" rel="noopener noreferrer">LINE登録</a>
+    <a href="https://forms.gle/XXXXXXXX" class="sticky-blue" target="_blank" rel="noopener noreferrer">体験申込</a>
+  </div>
+
+</body>
+</html>
