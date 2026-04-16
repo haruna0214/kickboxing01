@@ -50,7 +50,7 @@
 
     /* ---- 見出し ---- */
     .sec-title {
-      font-size: clamp(1.25rem, 3.5vw, 1.65rem);
+      font-size: 28px;
       font-weight: 700;
       color: var(--dark);
       line-height: 1.45;
@@ -334,6 +334,17 @@
       background: var(--border);
     }
 
+    /* 参加の流れ専用の縦線 */
+    .flow-step-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 11px;
+      top: 26px;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+
     .step-num {
       min-width: 30px;
       height: 30px;
@@ -347,6 +358,24 @@
       justify-content: center;
       flex-shrink: 0;
       z-index: 1;
+    }
+
+    /* 参加の流れ用：アイコン＋Stepテキスト */
+    .flow-step-num {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+      z-index: 1;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .step-icon {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
     }
 
     .step-body { padding-top: 3px; }
@@ -991,7 +1020,6 @@
     <!-- 料金 -->
     <section class="price">
       <div class="wrap">
-        <p class="news-en">Price</p>
         <h2 class="sec-title">料金</h2>
 
         <div class="price-main">
@@ -1094,27 +1122,27 @@
     <!-- 参加の流れ -->
     <section class="flow">
       <div class="wrap">
-        <h2 class="sec-title">参加までの流れ</h2>
+        <h2 class="sec-title">当日までの流れ</h2>
 
         <ul class="step-list" id="form">
-          <li class="step-item">
-            <div class="step-num">1</div>
+          <li class="step-item flow-step-item">
+            <div class="flow-step-num"><img src="icon.png" class="step-icon" alt="">Step1</div>
             <div class="step-body">
               <span class="flow-tag">Googleフォーム</span>
               <h3>体験申込フォームを送信</h3>
               <p>下の「体験を申し込む」ボタンからフォームに入力。希望日程や連絡先を記入してください。</p>
             </div>
           </li>
-          <li class="step-item">
-            <div class="step-num">2</div>
+          <li class="step-item flow-step-item">
+            <div class="flow-step-num"><img src="icon.png" class="step-icon" alt="">Step2</div>
             <div class="step-body">
               <span class="flow-tag">LINE / メール</span>
               <h3>日程・場所の確認連絡が届く</h3>
               <p>申込後、LINEまたはメールで開催日・集合場所・持ち物をご案内します。</p>
             </div>
           </li>
-          <li class="step-item">
-            <div class="step-num">3</div>
+          <li class="step-item flow-step-item">
+            <div class="flow-step-num"><img src="icon.png" class="step-icon" alt="">Step3</div>
             <div class="step-body">
               <span class="flow-tag">当日</span>
               <h3>動きやすい格好で参加</h3>
