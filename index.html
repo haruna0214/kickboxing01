@@ -37,7 +37,6 @@
       color: var(--text);
       font-size: 16px;
       line-height: 1.8;
-      padding-bottom: 68px;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -55,13 +54,14 @@
       font-weight: 700;
       color: var(--dark);
       line-height: 1.45;
-      margin-bottom: 8px;
+      margin-bottom: 28px;
     }
 
     .sec-sub {
       font-size: 0.88rem;
       color: var(--muted);
-      margin-bottom: 40px;
+      margin-top: -18px;
+      margin-bottom: 28px;
     }
 
     /* ---- ボタン ---- */
@@ -366,23 +366,23 @@
     /* =====================
        料金
     ===================== */
-    .price { background: var(--dark); color: var(--white); }
+    .price { background: var(--white); color: var(--text); }
 
-    .price .sec-title { color: var(--white); }
-    .price .sec-sub   { color: rgba(255,255,255,0.55); }
+    .price .sec-title { color: var(--dark); }
+    .price .sec-sub   { color: var(--muted); }
 
     .price-main {
-      border: 1px solid rgba(255,255,255,0.15);
+      border: 1px solid var(--border);
       border-radius: 4px;
       padding: 32px 24px;
       text-align: center;
       margin-bottom: 24px;
-      background: rgba(255,255,255,0.04);
+      background: var(--light);
     }
 
     .price-label {
       font-size: 0.82rem;
-      color: rgba(255,255,255,0.55);
+      color: var(--muted);
       margin-bottom: 10px;
     }
 
@@ -398,7 +398,7 @@
 
     .price-note {
       font-size: 0.78rem;
-      color: rgba(255,255,255,0.4);
+      color: var(--muted);
     }
 
     .price-includes {
@@ -410,7 +410,7 @@
 
     .price-includes li {
       font-size: 0.88rem;
-      color: rgba(255,255,255,0.75);
+      color: var(--text);
       padding-left: 18px;
       position: relative;
     }
@@ -482,7 +482,7 @@
     /* =====================
        安心材料
     ===================== */
-    .trust { background: var(--light); }
+    .trust { background: var(--light); padding: 48px 0; }
 
     .trust-list {
       list-style: none;
@@ -557,6 +557,44 @@
       font-size: 0.82rem;
       color: var(--muted);
       line-height: 1.7;
+    }
+
+    /* =====================
+       お知らせ
+    ===================== */
+    .news { background: var(--white); }
+
+    .news-en {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 900;
+      color: var(--dark);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .news-list {
+      list-style: none;
+      margin-top: 8px;
+    }
+
+    .news-item {
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .news-item:first-child { border-top: 1px solid var(--border); }
+
+    .news-date {
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    .news-text {
+      font-size: 0.9rem;
+      color: var(--text);
     }
 
     /* =====================
@@ -699,36 +737,34 @@
 
     .footer-copy { font-size: 0.72rem; }
 
-    /* =====================
-       固定フッターCTA
-    ===================== */
-    .sticky-cta {
+    .fab {
       position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
+      bottom: 28px;
+      right: 20px;
       z-index: 200;
-      display: flex;
-      background: rgba(36,73,90,0.97);
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding: 10px 16px;
-      gap: 10px;
-    }
-
-    .sticky-cta a {
-      flex: 1;
-      min-height: 46px;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 4px;
-      font-size: 0.82rem;
+      text-align: center;
+      font-size: 0.68rem;
       font-weight: 700;
-      gap: 6px;
+      line-height: 1.5;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      transition: opacity 0.2s, transform 0.2s;
+      text-decoration: none;
     }
 
-    .sticky-line { background: var(--line); color: #fff; }
-    .sticky-blue { background: var(--blue); color: #fff; }
+    .fab:hover {
+      opacity: 0.85;
+      transform: translateY(-2px);
+    }
+
+
 
     /* =====================
        レスポンシブ
@@ -771,8 +807,7 @@
   <header class="site-header" role="banner">
     <div class="logo">KICK<span>BOXING</span></div>
     <nav class="hd-btns" aria-label="メインCTA">
-      <a href="#line" class="hd-line">LINE登録</a>
-      <a href="#form" class="hd-blue">体験申込</a>
+      <a href="#form" class="hd-blue">体験申し込み</a>
     </nav>
   </header>
 
@@ -794,173 +829,13 @@
         </h1>
 
         <p class="hero-lead">
-          東京（新宿・墨田区）で開催中。<br>
-          入会金なし、都度払い、気軽に参加できるキックボクシング体験クラスです。
+          東京新宿エリア・墨田区エリアにある公共施設の武道場をお借りして、キックボクシングを身近に感じてもらうために活動しています。<br><br>
+          性別、初心者・経験者問わず、中学生以上ならどなたでも気軽に参加できます。<br>一緒にキックボクシングを楽しみましょう。
         </p>
-
-        <div class="hero-points">
-          <span>入会金なし</span>
-          <span>都度払い 〜2,000円</span>
-          <span>新宿・墨田区</span>
-          <span>中学生以上 男女OK</span>
-        </div>
 
         <div class="hero-btns">
           <a href="#form" class="btn btn-blue">体験を申し込む</a>
-          <a href="#line" class="btn btn-ghost">LINEで確認する</a>
         </div>
-      </div>
-    </section>
-
-
-    <!-- 共感 -->
-    <section class="empathy">
-      <div class="wrap">
-        <h2 class="sec-title">こんな気持ち、ありませんか。</h2>
-        <p class="sec-sub">多くの方が、最初は同じ不安を抱えています。</p>
-
-        <ul class="pain-list">
-          <li>スポーツジムは続かなかった経験がある</li>
-          <li>キックボクシングに興味はあるけど、雰囲気が怖そうで不安</li>
-          <li>体力に自信がないし、周りについていけるか心配</li>
-          <li>月額会員だと通えなかった時がもったいない</li>
-          <li>道具が必要なのか、何を持っていけばいいかわからない</li>
-        </ul>
-
-        <div class="empathy-resolve">
-          <p>そのお悩み、ひとつずつ解決します。</p>
-          <strong>「1回だけ」を気軽に試せる体験クラスです。</strong>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- サービス -->
-    <section class="service">
-      <div class="wrap">
-        <h2 class="sec-title">選ばれる理由</h2>
-        <p class="sec-sub">初心者でも安心して参加できる仕組みを用意しています。</p>
-
-        <div class="feature-list">
-          <div class="feature-item">
-            <h3>入会金ゼロ</h3>
-            <p>入会金・登録料は不要。気に入ったら続けてOK。</p>
-          </div>
-          <div class="feature-item">
-            <h3>都度払い制</h3>
-            <p>月額固定なし。来た分だけ払う。2,000円以内で参加できます。</p>
-          </div>
-          <div class="feature-item">
-            <h3>手ぶらでOK</h3>
-            <p>グローブ等レンタルあり。動きやすい服装だけで来てください。</p>
-          </div>
-          <div class="feature-item">
-            <h3>少人数制</h3>
-            <p>少人数で丁寧に指導。初心者でも置いてきぼりにしません。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- 体験内容 -->
-    <section class="program">
-      <div class="wrap">
-        <h2 class="sec-title">体験クラスの内容</h2>
-        <p class="sec-sub">約60分で基礎から楽しく学べます。</p>
-
-        <div class="program-img" role="img" aria-label="体験クラスの様子（ダミー）">
-          [ クラスの様子 画像 ]
-        </div>
-
-        <ul class="step-list">
-          <li class="step-item">
-            <div class="step-num">1</div>
-            <div class="step-body">
-              <h3>ウォームアップ（約10分）</h3>
-              <p>準備運動・体をほぐす動き。体力に自信がなくてもOK。</p>
-            </div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">2</div>
-            <div class="step-body">
-              <h3>基本打撃の練習（約25分）</h3>
-              <p>ジャブ・クロス・ローキックなど基本を丁寧に解説。一人ひとりに合わせて指導します。</p>
-            </div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">3</div>
-            <div class="step-body">
-              <h3>ミット打ち体験（約15分）</h3>
-              <p>実際にトレーナーのミットを打つ体験。達成感を体感できます。</p>
-            </div>
-          </li>
-          <li class="step-item">
-            <div class="step-num">4</div>
-            <div class="step-body">
-              <h3>クールダウン・質疑応答（約10分）</h3>
-              <p>ストレッチ後、疑問や今後の参加について気軽に相談できます。</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-
-    <!-- 料金 -->
-    <section class="price">
-      <div class="wrap">
-        <h2 class="sec-title">料金</h2>
-        <p class="sec-sub">月額なし・続けやすい都度払い制</p>
-
-        <div class="price-main">
-          <p class="price-label">体験クラス（1回）</p>
-          <p class="price-num">¥2,000<small> 以内</small></p>
-          <p class="price-note">※詳細はLINEまたはフォームでご確認ください。</p>
-        </div>
-
-        <ul class="price-includes">
-          <li>入会金・登録料 完全無料</li>
-          <li>グローブ等レンタル込み</li>
-          <li>都度払い（月額・定期縛りなし）</li>
-          <li>リピーター割引あり（詳細はLINEで）</li>
-          <li>キャンセルは前日までOK</li>
-        </ul>
-      </div>
-    </section>
-
-
-    <!-- 開催場所 -->
-    <section class="location">
-      <div class="wrap">
-        <h2 class="sec-title">開催エリア</h2>
-        <p class="sec-sub">東京2拠点で開催中</p>
-
-        <div class="location-cards">
-          <div class="location-card">
-            <div class="location-map" role="img" aria-label="新宿エリアの地図（ダミー）">
-              [ 地図 / 外観写真 ]
-            </div>
-            <div class="location-body">
-              <h3>新宿エリア</h3>
-              <p>新宿区内のレンタルスペース<br>（詳細はLINEまたは申込後にご案内）</p>
-              <p class="access">新宿駅 徒歩○分（ダミー）</p>
-            </div>
-          </div>
-
-          <div class="location-card">
-            <div class="location-map" role="img" aria-label="墨田区エリアの地図（ダミー）">
-              [ 地図 / 外観写真 ]
-            </div>
-            <div class="location-body">
-              <h3>墨田区エリア</h3>
-              <p>墨田区内のレンタルスペース<br>（詳細はLINEまたは申込後にご案内）</p>
-              <p class="access">錦糸町駅 徒歩○分（ダミー）</p>
-            </div>
-          </div>
-        </div>
-
-        <p class="location-note">開催スケジュール・空き状況はLINEで随時お知らせします。</p>
       </div>
     </section>
 
@@ -969,7 +844,6 @@
     <section class="trust">
       <div class="wrap">
         <h2 class="sec-title">初めてでも安心の理由</h2>
-        <p class="sec-sub">「怖い・ついていけない」はありません。</p>
 
         <ul class="trust-list">
           <li class="trust-item">
@@ -1003,16 +877,169 @@
         </ul>
 
         <div class="trainer">
-          <div class="trainer-icon" role="img" aria-label="トレーナーアイコン（顔出しなし）">
-            TRAINER
-          </div>
           <div class="trainer-info">
-            <h3>トレーナー ○○（ダミー名）</h3>
-            <p>
-              キックボクシング歴○○年。「初心者に寄り添った指導」をモットーに、怒らない・焦らせない丁寧な指導を心がけています。資格：○○インストラクター認定（ダミー）
-            </p>
+            <h3>トレーナー　〇名前が入ります〇</h3>
+            <p>キックボクシング歴 ○○年<br>出身地 〇〇県　年齢 〇〇歳</p>
+            <p>15歳からキックボクシングを始め、競技一筋に打ち込んできました。<br>
+            地方から上京し、新天地で苦労した経験から、「誰もが気軽にキックボクシングを始められる場所をつくりたい」とおもい、この活動を立ち上げました。<br>
+            キックボクシングの魅力を、体験を通して感じてほしいので経験者だけではなく、身体を動かす目的の方や学生さんも大歓迎です。<br>
+            この他、格闘技アマチュア大会運営にも携わっています。</p>
           </div>
         </div>
+      </div>
+    </section>
+
+
+    <!-- 体験内容 -->
+    <section class="program">
+      <div class="wrap">
+        <h2 class="sec-title news-en">トレーニング例</h2>
+
+        <ul class="step-list">
+          <li class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h3>ウォームアップ（約10分）</h3>
+              <p>準備運動・体をほぐす動き。体力に自信がなくてもOK。</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h3>打ち方フォームコーチング（約15分）</h3>
+              <p>パンチ・キックなど丁寧に解説。一人ひとりに合わせて指導します。</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h3>コンビネーションシャドー（約10分）</h3>
+              <p>習った動きを組み合わせて実践的なコンビネーションを体験します。</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h3>ミット打ち体験（約15分）</h3>
+              <p>実際にトレーナーのミットを打つ体験。達成感を体感できます。</p>
+            </div>
+          </li>
+          <li class="step-item">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <h3>クールダウン・質疑応答（約10分）</h3>
+              <p>ストレッチ後、疑問や今後の参加について気軽に相談できます。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- お知らせ -->
+    <section class="news">
+      <div class="wrap">
+        <h2 class="sec-title">お知らせ</h2>
+
+        <ul class="news-list">
+          <li class="news-item">
+            <span class="news-date">2025.00.00</span>
+            <span class="news-text">お知らせのテキストが入ります。お知らせのテキストが入ります。</span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2025.00.00</span>
+            <span class="news-text">お知らせのテキストが入ります。お知らせのテキストが入ります。</span>
+          </li>
+          <li class="news-item">
+            <span class="news-date">2025.00.00</span>
+            <span class="news-text">お知らせのテキストが入ります。お知らせのテキストが入ります。</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+
+
+    <!-- サービス -->
+    <section class="service">
+      <div class="wrap">
+        <h2 class="sec-title">選ばれる理由</h2>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <h3>入会金ゼロ</h3>
+            <p>入会金・登録料は不要。気に入ったら続けてOK。</p>
+          </div>
+          <div class="feature-item">
+            <h3>都度払い制</h3>
+            <p>月額固定なし。来た分だけ払う。2,000円以内で参加できます。</p>
+          </div>
+          <div class="feature-item">
+            <h3>手ぶらでOK</h3>
+            <p>グローブ等レンタルあり。動きやすい服装だけで来てください。</p>
+          </div>
+          <div class="feature-item">
+            <h3>少人数制</h3>
+            <p>少人数で丁寧に指導。初心者でも置いてきぼりにしません。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 料金 -->
+    <section class="price">
+      <div class="wrap">
+        <p class="news-en">Price</p>
+        <h2 class="sec-title">料金</h2>
+
+        <div class="price-main">
+          <p class="price-num">¥1,500<small>（税込）</small></p>
+          <p class="price-label">入会金なし　都度払い制</p>
+        </div>
+
+        <ul class="price-includes">
+          <li>入会金・登録料 完全無料</li>
+          <li>グローブ等レンタル込み</li>
+          <li>都度払い（月額・定期縛りなし）</li>
+          <li>リピーター割引あり（詳細はLINEで）</li>
+          <li>キャンセルは前日までOK</li>
+        </ul>
+      </div>
+    </section>
+
+
+    <!-- 開催場所 -->
+    <section class="location">
+      <div class="wrap">
+        <h2 class="sec-title">開催エリア</h2>
+
+        <div class="location-cards">
+          <div class="location-card">
+            <div class="location-map" role="img" aria-label="新宿エリアの地図（ダミー）">
+              [ 地図 / 外観写真 ]
+            </div>
+            <div class="location-body">
+              <h3>新宿エリア</h3>
+              <p>新宿区内のレンタルスペース<br>（詳細はLINEまたは申込後にご案内）</p>
+              <p class="access">新宿駅 徒歩○分（ダミー）</p>
+            </div>
+          </div>
+
+          <div class="location-card">
+            <div class="location-map" role="img" aria-label="墨田区エリアの地図（ダミー）">
+              [ 地図 / 外観写真 ]
+            </div>
+            <div class="location-body">
+              <h3>墨田区エリア</h3>
+              <p>墨田区内のレンタルスペース<br>（詳細はLINEまたは申込後にご案内）</p>
+              <p class="access">錦糸町駅 徒歩○分（ダミー）</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="location-note">開催スケジュール・空き状況はLINEで随時お知らせします。</p>
       </div>
     </section>
 
@@ -1021,7 +1048,6 @@
     <section class="faq">
       <div class="wrap">
         <h2 class="sec-title">よくある質問</h2>
-        <p class="sec-sub">参加前の不安を解消します。</p>
 
         <ul class="faq-list">
           <li class="faq-item">
@@ -1051,7 +1077,7 @@
           <li class="faq-item">
             <details>
               <summary>キャンセルはできますか？</summary>
-              <p class="faq-answer">前日までのキャンセルは無料です。当日キャンセルについてはLINEでご連絡ください。</p>
+              <p class="faq-answer">3日前までのキャンセルは無料です。無断キャンセルがあった場合、次回の予約をお断りする場合があります。</p>
             </details>
           </li>
           <li class="faq-item">
@@ -1069,7 +1095,6 @@
     <section class="flow">
       <div class="wrap">
         <h2 class="sec-title">参加までの流れ</h2>
-        <p class="sec-sub">申込から当日まで、迷わずスムーズです。</p>
 
         <ul class="step-list" id="form">
           <li class="step-item">
@@ -1138,17 +1163,19 @@
         <li><a href="#faq">よくある質問</a></li>
         <li><a href="#line">お問い合わせ</a></li>
         <li><a href="#">プライバシーポリシー</a></li>
+
       </ul>
     </nav>
     <p class="footer-copy">&copy; 2025 Kickboxing Studio. All rights reserved.</p>
   </footer>
 
 
-  <!-- 固定フッターCTA -->
-  <div class="sticky-cta" role="complementary" aria-label="クイックアクション">
-    <a href="https://lin.ee/XXXXXXXX" class="sticky-line" target="_blank" rel="noopener noreferrer">LINE登録</a>
-    <a href="https://forms.gle/XXXXXXXX" class="sticky-blue" target="_blank" rel="noopener noreferrer">体験申込</a>
-  </div>
+
+
+  <!-- FAB -->
+  <a href="https://forms.gle/XXXXXXXX" class="fab" target="_blank" rel="noopener noreferrer">
+    体験<br>申し込み
+  </a>
 
 </body>
 </html>
