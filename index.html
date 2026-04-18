@@ -103,20 +103,17 @@
       z-index: 100;
       background: var(--white);
       border-bottom: 1px solid var(--border);
-      padding: 14px 24px;
+      padding: 4px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .logo {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--dark);
-      letter-spacing: 0.04em;
+    .logo img {
+      height: 100px;
+      width: auto;
+      display: block;
     }
-
-    .logo span { color: var(--blue); }
 
     .hd-btns { display: flex; gap: 8px; }
 
@@ -412,13 +409,13 @@
     .price-label {
       font-size: 0.82rem;
       color: var(--muted);
-      margin-bottom: 10px;
+      margin-bottom: 0px;
     }
 
     .price-num {
       font-size: clamp(2.2rem, 8vw, 3.2rem);
       font-weight: 900;
-      color: var(--blue);
+      color: #00165b;
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -694,8 +691,8 @@
        CTA
     ===================== */
     .cta-section {
-      background: var(--dark);
-      color: var(--white);
+      background: #f4f8fa;
+      color: var(--text);
       padding: 64px 0;
       border-top: none;
     }
@@ -707,8 +704,8 @@
     }
 
     .cta-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.8);
+      border: 1px solid var(--border);
       border-radius: 4px;
       padding: 24px 20px;
       display: flex;
@@ -719,11 +716,12 @@
     .cta-card h3 {
       font-size: 0.95rem;
       font-weight: 700;
+      color: #24495a;
     }
 
     .cta-card p {
       font-size: 0.83rem;
-      color: rgba(255,255,255,0.6);
+      color: #24495a;
       line-height: 1.7;
     }
 
@@ -774,15 +772,16 @@
       width: 84px;
       height: 84px;
       border-radius: 50%;
-      background: var(--blue);
-      color: #fff;
+      background: #00165b;
+      color: #ffd44d;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      font-size: 0.68rem;
+      font-size: 12px;
       font-weight: 700;
       line-height: 1.5;
+      letter-spacing: 0.08em;
       box-shadow: 0 4px 16px rgba(0,0,0,0.18);
       transition: opacity 0.2s, transform 0.2s;
       text-decoration: none;
@@ -834,7 +833,7 @@
 
   <!-- ヘッダー -->
   <header class="site-header" role="banner">
-    <div class="logo">KICK<span>BOXING</span></div>
+    <div class="logo"><img src="logo.png" alt=""></div>
     <nav class="hd-btns" aria-label="メインCTA">
       <a href="#form" class="hd-blue">体験申し込み</a>
     </nav>
@@ -869,42 +868,11 @@
     </section>
 
 
-    <!-- 安心材料 -->
+
+
+    <!-- トレーナー -->
     <section class="trust">
       <div class="wrap">
-        <h2 class="sec-title">初めてでも安心の理由</h2>
-
-        <ul class="trust-list">
-          <li class="trust-item">
-            <div class="trust-marker"></div>
-            <div>
-              <h3>スパーリングなし</h3>
-              <p>体験クラスは相手と打ち合う練習はありません。ミット打ちとシャドーが中心。安全です。</p>
-            </div>
-          </li>
-          <li class="trust-item">
-            <div class="trust-marker"></div>
-            <div>
-              <h3>手ぶらでOK</h3>
-              <p>グローブや包帯はレンタル可能。動きやすい服装さえあれば特別な準備は不要です。</p>
-            </div>
-          </li>
-          <li class="trust-item">
-            <div class="trust-marker"></div>
-            <div>
-              <h3>アットホームな雰囲気</h3>
-              <p>怖い先輩がいるような雰囲気ではありません。参加者の多くが初心者・運動不足からのスタートです。</p>
-            </div>
-          </li>
-          <li class="trust-item">
-            <div class="trust-marker"></div>
-            <div>
-              <h3>参加前の相談はLINEで</h3>
-              <p>「私でも大丈夫？」「何を着ていけばいい？」などどんな質問にも丁寧に回答します。</p>
-            </div>
-          </li>
-        </ul>
-
         <div class="trainer">
           <div class="trainer-info">
             <h3>トレーナー　〇名前が入ります〇</h3>
@@ -990,31 +958,6 @@
 
 
 
-    <!-- サービス -->
-    <section class="service">
-      <div class="wrap">
-        <h2 class="sec-title">選ばれる理由</h2>
-
-        <div class="feature-list">
-          <div class="feature-item">
-            <h3>入会金ゼロ</h3>
-            <p>入会金・登録料は不要。気に入ったら続けてOK。</p>
-          </div>
-          <div class="feature-item">
-            <h3>都度払い制</h3>
-            <p>月額固定なし。来た分だけ払う。2,000円以内で参加できます。</p>
-          </div>
-          <div class="feature-item">
-            <h3>手ぶらでOK</h3>
-            <p>グローブ等レンタルあり。動きやすい服装だけで来てください。</p>
-          </div>
-          <div class="feature-item">
-            <h3>少人数制</h3>
-            <p>少人数で丁寧に指導。初心者でも置いてきぼりにしません。</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
 
     <!-- 料金 -->
@@ -1072,6 +1015,41 @@
     </section>
 
 
+    <!-- 参加の流れ -->
+    <section class="flow">
+      <div class="wrap">
+        <h2 class="sec-title">当日までの流れ</h2>
+
+        <ul class="step-list" id="form">
+          <li class="step-item flow-step-item">
+            <div class="flow-step-num"><img src="icon.png" class="step-icon" alt="">Step1</div>
+            <div class="step-body">
+              <span class="flow-tag">Googleフォーム</span>
+              <h3>体験申込フォームを送信</h3>
+              <p>下の「体験を申し込む」ボタンからフォームに入力。希望日程や連絡先を記入してください。</p>
+            </div>
+          </li>
+          <li class="step-item flow-step-item">
+            <div class="flow-step-num"><img src="icon.png" class="step-icon" alt="">Step2</div>
+            <div class="step-body">
+              <span class="flow-tag">LINE / メール</span>
+              <h3>日程・場所の確認連絡が届く</h3>
+              <p>申込後、LINEまたはメールで開催日・集合場所・持ち物をご案内します。</p>
+            </div>
+          </li>
+          <li class="step-item flow-step-item">
+            <div class="flow-step-num"><img src="icon.png" class="step-icon" alt="">Step3</div>
+            <div class="step-body">
+              <span class="flow-tag">当日</span>
+              <h3>動きやすい格好で参加</h3>
+              <p>手ぶらでOK。当日の流れはトレーナーが丁寧に説明するので、初めてでも迷いません。</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
     <!-- FAQ -->
     <section class="faq">
       <div class="wrap">
@@ -1119,41 +1097,6 @@
     </section>
 
 
-    <!-- 参加の流れ -->
-    <section class="flow">
-      <div class="wrap">
-        <h2 class="sec-title">当日までの流れ</h2>
-
-        <ul class="step-list" id="form">
-          <li class="step-item flow-step-item">
-            <div class="flow-step-num"><img src="icon.png" class="step-icon" alt="">Step1</div>
-            <div class="step-body">
-              <span class="flow-tag">Googleフォーム</span>
-              <h3>体験申込フォームを送信</h3>
-              <p>下の「体験を申し込む」ボタンからフォームに入力。希望日程や連絡先を記入してください。</p>
-            </div>
-          </li>
-          <li class="step-item flow-step-item">
-            <div class="flow-step-num"><img src="icon.png" class="step-icon" alt="">Step2</div>
-            <div class="step-body">
-              <span class="flow-tag">LINE / メール</span>
-              <h3>日程・場所の確認連絡が届く</h3>
-              <p>申込後、LINEまたはメールで開催日・集合場所・持ち物をご案内します。</p>
-            </div>
-          </li>
-          <li class="step-item flow-step-item">
-            <div class="flow-step-num"><img src="icon.png" class="step-icon" alt="">Step3</div>
-            <div class="step-body">
-              <span class="flow-tag">当日</span>
-              <h3>動きやすい格好で参加</h3>
-              <p>手ぶらでOK。当日の流れはトレーナーが丁寧に説明するので、初めてでも迷いません。</p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-
     <!-- CTA -->
     <section class="cta-section" id="line">
       <div class="wrap">
@@ -1167,10 +1110,10 @@
           </div>
 
           <div class="cta-card">
-            <h3>体験クラスを申し込む</h3>
-            <p>初回体験はGoogleフォームから。希望日程・連絡先を入力するだけ。2分で完了します。</p>
+            <h3>体験を申し込む</h3>
+            <p>初回体験は、下記ボタンからGoogleフォームで申し込み可能です。</p>
             <a href="https://forms.gle/XXXXXXXX" class="btn btn-blue" target="_blank" rel="noopener noreferrer">
-              体験申込フォームへ
+              体験申し込み
             </a>
           </div>
         </div>
@@ -1182,7 +1125,7 @@
 
   <!-- フッター -->
   <footer class="site-footer" role="contentinfo">
-    <p class="footer-logo">KICK<span>BOXING</span></p>
+    <p class="footer-logo">BOXING <span>CLUB</span></p>
     <nav aria-label="フッターナビ">
       <ul class="footer-nav">
         <li><a href="#service">サービス</a></li>
@@ -1202,7 +1145,7 @@
 
   <!-- FAB -->
   <a href="https://forms.gle/XXXXXXXX" class="fab" target="_blank" rel="noopener noreferrer">
-    体験<br>申し込み
+    体験は<br>こちら
   </a>
 
 </body>
